@@ -1,7 +1,7 @@
-jailinit serves as a replacement for FreeBSD's init(8), for use in "virtual servers" started by a jail(2) system call and more specifically the jail(8) userland tool in FreeBSD.  If you use jail(8) to launch the "virtual system", the application you should launch within the jailed hierarchy is /sbin/init (which you replaced with jailinit).  
+jailinit serves as a replacement for FreeBSD's init(8) for use with virtual servers started by a jail(2) system call and more specifically the jail(8) userland tool in FreeBSD. If you use jail(8) to launch the virtual server, the application you should launch within the jailed hierarchy is /sbin/init, which you replaced with jailinit.  
 
-This init replacement will function as you expect - bringing the system into a mutli-user state and handling /etc/rc for runtime configurations as usual.  This init replacement will also accept signals from outside the jail (or inside it) for the purpose of restarting or stopping the "virtual system".
+This init replacement will function as you might expect. It will bring the system into a mutli-user state and handle /etc/rc for runtime configurations as usual. This init replacement will also accept signals from outside or inside the jail for the purpose of restarting or stopping the virtual server.
 
 See also: http://www.freebsd.org/doc/handbook/jails-build.html
 
-PS: The last time I tested this was with FreeBSD 4.0-STABLE - quite some time ago. There may be more appropriate solutions available now.
+The last time I tested this was with FreeBSD 4.0-STABLE - quite some time ago. There may be more appropriate solutions available now.
